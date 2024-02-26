@@ -1,0 +1,12 @@
+extends  Layouts/default.pug
+include mixins/box-head.pug
+block main
+  //- div(class="box-head")
+  //-   h1(class="inner-title") Trang chu
+  //-   div(class="inner-desc") Day la doan mo ta cua trang chu
+
+  +box-head("Danh sach san pham","Day la doan mo ta danh sach san pham")
+
+  ul
+    each item in products
+        li #{item.title}  
